@@ -10,9 +10,6 @@ public class FeedItemConfiguration : BaseEntityTypeConfiguration<FeedItem>
     {
         base.Configure(builder);
 
-        builder.Property(i => i.Title)
-               .HasMaxLength(100);
-
         builder.Property(i => i.Link)
                .HasMaxLength(100);
 

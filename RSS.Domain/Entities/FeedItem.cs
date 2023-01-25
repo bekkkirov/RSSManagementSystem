@@ -8,9 +8,9 @@ public class FeedItem : BaseEntity
 
     public string Link { get; set; } = string.Empty;
 
-    public string Description { get; set; } = string.Empty;
+    public string? Description { get; set; }
 
-    public string Author { get; set; } = string.Empty;
+    public string? Author { get; set; }
 
     public DateTime PublishDate { get; set; }
 
