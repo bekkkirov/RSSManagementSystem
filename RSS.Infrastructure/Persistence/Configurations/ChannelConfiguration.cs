@@ -20,7 +20,7 @@ public class ChannelConfiguration : BaseEntityTypeConfiguration<Channel>
                .HasMaxLength(10);
 
         builder.Property(c => c.Copyright)
-               .HasMaxLength(50);
+               .HasMaxLength(150);
 
         builder.Property(c => c.Link)
                .HasMaxLength(100);
