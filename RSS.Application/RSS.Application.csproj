@@ -10,4 +10,10 @@
     <ProjectReference Include="..\RSS.Domain\RSS.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Models\" />
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
 </Project>
