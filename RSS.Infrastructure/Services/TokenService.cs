@@ -22,7 +22,7 @@ public class TokenService : ITokenService
         var claims = new List<Claim>()
         {
             new Claim(ClaimTypes.Name, userName),
-            new Claim(ClaimTypes.NameIdentifier, userName)
+            new Claim(ClaimTypes.NameIdentifier, userId.ToString())
         };
 
         var bytes = Encoding.UTF8.GetBytes(_tokenOptions.Value.Key);
