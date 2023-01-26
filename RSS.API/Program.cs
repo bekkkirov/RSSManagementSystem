@@ -1,4 +1,5 @@
 using RSS.API.Extensions;
+using RSS.API.Services;
 
 namespace RSS.API;
 
@@ -13,6 +14,7 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddInfrastructure(builder.Configuration);
+        builder.Services.AddHostedService(provider => provider.GetRequiredService<NewsBackgroundService>());
 
         var app = builder.Build();
 
@@ -25,6 +27,7 @@ public class Program
 
         app.UseHttpsRedirection();
 
+        app.UseAuthentication();
         app.UseAuthorization();
 
 
