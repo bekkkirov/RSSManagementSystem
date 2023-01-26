@@ -12,6 +12,8 @@ public class MapperProfile : Profile
         CreateMap<ChannelImage, ChannelImageDto>();
         CreateMap<Channel, ChannelDto>();
 
+        CreateMap<FeedItem, FeedItemDto>();
+
         CreateMap<SyndicationFeed, Channel>()
             .ForMember(d => d.Id, opt => opt.Ignore())
             .ForMember(d => d.Title, opt => opt.MapFrom(src => src.Title.Text))
